@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Finance.CardValidator", "Finance.CardValidator\Finance.CardValidator.csproj", "{44EA715A-B4B7-42F6-AC89-AF36A9FD7941}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Finance.CardValidator.Tests", "Finance.CardValidator.Tests\Finance.CardValidator.Tests.csproj", "{8279A03D-4944-476A-952B-C584A89F2AE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44EA715A-B4B7-42F6-AC89-AF36A9FD7941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44EA715A-B4B7-42F6-AC89-AF36A9FD7941}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44EA715A-B4B7-42F6-AC89-AF36A9FD7941}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44EA715A-B4B7-42F6-AC89-AF36A9FD7941}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8279A03D-4944-476A-952B-C584A89F2AE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8279A03D-4944-476A-952B-C584A89F2AE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8279A03D-4944-476A-952B-C584A89F2AE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8279A03D-4944-476A-952B-C584A89F2AE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

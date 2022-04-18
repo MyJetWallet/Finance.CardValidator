@@ -1,0 +1,32 @@
+image: mcr.microsoft.com/dotnet/core/sdk:3.1
+
+variables:
+  LIB_FOLDER: Finance.CardValidator
+  TEST_FOLDER: Finance.CardValidator.Tests
+
+stages:
+  - test
+  - publish-nuget
+
+test:
+  stage: test
+  tags: [monfex]
+  script:
+    - cd ${TEST_FOLDER}
+    - dotnet test
+  only:
+    - master
+
+publish-nuget:
+  stage: publish-nuget
+  tags: [monfex]
+  script:
+    - cd ${LIB_FOLDER}
+    - projectfile=${LIB_FOLDER}
+    - ver=$(cat $projectfile.csproj | grep "<Version>")
+    - ver=${ver//[\/<>Version ]/}
+    - echo $ver
+    - dotnet pack $projectfile.csproj --configuration Release --output ./out-nuget
+    - dotnet nuget push ./out-nuget/$projectfile.$ver.nupkg --api-key ${NUGET_PUBLISH_KEY} --source https://api.nuget.org/v3/index.json
+  only:
+    - master     
